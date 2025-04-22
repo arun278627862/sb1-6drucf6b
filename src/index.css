@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Custom cursor styles (can be kept or removed, won't affect default cursor now) */
+/* .cursor { */
+  /* pointer-events: none; */
+  /* mix-blend-mode: normal; */
+/* } */
+
+/* Hide default cursor */
+/* 
+  REMOVED THE FOLLOWING BLOCK:
+  * {
+    cursor: none !important;
+  } 
+*/
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure interactive elements get the pointer */
+button, a, [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
+  cursor: pointer;
+}
+
+/* You might want to add other selectors that should have a pointer */
+/* e.g., label[for] { cursor: pointer; } */
